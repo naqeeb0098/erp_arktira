@@ -1,0 +1,61 @@
+.web-sidebar {
+	padding-top: 2rem;
+	position: sticky;
+	top: 0;
+}
+
+.sidebar-item a {
+	display: block;
+	padding: 0.25rem 0.5rem;
+	margin-top: 0.25rem;
+	border-radius: 4px;
+	border: 1px solid #90c225;
+	font-size: $font-size-sm;
+	color: var(--text-color);
+	text-decoration: none;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+	font-weight: 500;
+	background-color: white;
+	@include transition();
+
+	&:hover {
+		background-color: #E8EAEA;
+		box-shadow: 0px 0px 5px 2px rgba(48, 182, 179, 0.4);
+		border: 1px solid #30B6B3;
+	}
+}
+
+// Remove top margin from frist child
+.sidebar-item:first-child a {
+	margin-top: 0rem;
+}
+
+.sidebar-item a.active {
+	color: black;
+	background-color: #90c225;
+	font-weight: 600;
+}
+
+.sidebar-item-icon {
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+}
+.sidebar-item-icon:hover{
+	--icon-stroke: #90c225;
+}
+
+.sidebar-group {
+	margin-bottom: 1rem;
+
+	h6 {
+		font-size: $font-size-sm;
+		margin-bottom: 0.75rem;
+		line-height: 1.5;
+	}
+
+	> ul {
+		padding-left: 0.5rem;
+		margin-bottom: 2rem;
+	}
+}
